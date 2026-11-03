@@ -1,0 +1,17 @@
+Sample Report (short)
+---------------------
+Scanned paths: C:\Users\Public
+
+Flagged files:
+- C:\Users\Public\spytool.exe
+  - Reason: filename contains 'spy' and imports GetAsyncKeyState
+  - Size: 120 KB
+Flagged running process:
+- PID 4520 - spytool.exe (imports: GetAsyncKeyState)
+Run registry entries:
+- SpyService -> "C:\Users\Public\spytool.exe"
+
+Recommendation:
+1. Do not delete immediately. Collect hash and upload to VirusTotal for verification.
+2. Quarantine the file, inspect behavior in a sandbox VM.
+3. If confirmed malicious, remove autorun entries, scheduled tasks and delete binary from offline/safe environment.
